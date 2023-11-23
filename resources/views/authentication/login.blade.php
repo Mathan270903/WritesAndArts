@@ -73,7 +73,7 @@
                             class="form-control shadow-none">
                     </div>
                     <div class="mb-3">
-                        <p class="text-secondary">create a new account? <a href="/register">signup</a></p>
+                        <p class="text-secondary">create a new account? <a href="{{route('RegisterView')}}">signup</a></p>
                     </div>
                     <div class="mb-3">
                         <button class="btn btn-success shadow-none w-100">Login</button>
