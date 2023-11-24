@@ -25,14 +25,14 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title my-1">{{$file->Name}}</h5>
                                 <div class="buttons d-flex justify-content-around my-2 showPdf-{{$file->id}}">
-                                    <a OnClick="showPdf(`{{ $file->Path }}`, `{{$file->id}}`)" class="btn btn-secondary">View</a>
+                                    <a href="#" OnClick="showPdf(`{{ $file->Path }}`, `{{$file->id}}`)" class="btn btn-success">View</a>
                                     {{-- <a href="{{route('ViewMagazine',['id' => $file->id])}}" class="btn btn-secondary">View</a>
                                     <span id="strFilePath" class="invisible">{{ $file->Path }}</span> --}}
 
                                     @if (Session::has("UserEmail"))
-                                        <a href="{{route('DownloadMagazine',['id' => $file->id])}}" class="btn btn-success">Download</a>
+                                        <a href="{{route('DownloadMagazine',['id' => $file->id])}}" class="btn btn-secondary">Download</a>
                                     @else
-                                        <a href="{{route('LoginView')}}" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Login to download...">Download</a>
+                                        <a href="{{route('LoginView')}}" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Login to download...">Download</a>
                                         {{-- <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Login to download...">Download</button> --}}
                                     @endif
                                 </div>

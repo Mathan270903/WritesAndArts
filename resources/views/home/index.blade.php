@@ -105,12 +105,12 @@
                                 <h5 class="card-title my-1">{{$files->Name}}</h5>
                                 <div class="buttons d-flex justify-content-around my-2 showPdf-{{$files->id}}">
                                     {{-- <a href="{{route('ViewMagazine',['id' => $files->id])}}" class="btn btn-secondary">View</a> --}}
-                                    <a OnClick="showPdf(`{{ $files->Path }}`, `{{$files->id}}`)" class="btn btn-secondary">View</a>
+                                    <a href="#" OnClick="showPdf(`{{ $files->Path }}`, `{{$files->id}}`)" class="btn btn-success">View</a>
                                     
                                     @if (Session::has("UserEmail"))
-                                        <a href="{{route('DownloadMagazine',['id' => $files->id])}}" class="btn btn-success">Download</a>
+                                        <a href="{{route('DownloadMagazine',['id' => $files->id])}}" class="btn btn-secondary">Download</a>
                                     @else
-                                        <a href="{{route('LoginView')}}" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Login to download...">Download</a>
+                                        <a href="{{route('LoginView')}}" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Login to download...">Download</a>
                                         {{-- <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Login to">Download</button> --}}
                                     @endif
 
